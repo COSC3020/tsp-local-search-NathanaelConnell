@@ -5,7 +5,7 @@ lecture on NP-hard problems -- given a set of cities, determine the length of
 the shortest tour that visits all of them. We can get from any city to any other
 city, i.e. the graph of cities is completely connected. We consider the version
 of the Traveling Salesperson Problem that finds the shortest tour to visit $n$
-cities, starting at a city and ending at the $n$ th city; it *does not* go
+cities, starting at a city and ending at the $n$ th city; it _does not_ go
 back to the start. The start city may be any of the cities. Remember that the
 graph for a TSP is undirected, i.e. the cost is the same in either direction.
 
@@ -50,3 +50,6 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+I had a little help from ai to help understand the swapping and the stopping criteria.
+
+The worst case asymptotic time complexity of the implementation is O(n). The calculateRouteDistance function and the twoOptSwap function both operate in O(n) time and since each iteration of the algorithm involves these operations, a single iteration is O(n). The algorithm runs for a maximum of 100 iterations, which is based on my stoping criteria, which is a constant, so the overall time complexity remains O(n). the worst case asymptotic memory complexity is also O(n), as the algorithm stores the current route, which requires O(n) memory, and creates a new route during swaps, also requiring O(n) memory. Other variables require only O(1) space. So the algorithm is effecient in terms of both time and space.
